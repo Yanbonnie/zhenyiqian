@@ -1,0 +1,290 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="zh" class="ie8"><![endif]-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="_globalsign-domain-verification" content="gQ5czoKjwTzrK1qpJubM83E0KIXxD6f5uGByP9-6U-" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Expires" CONTENT="0"> 
+    <meta http-equiv="Cache-Control" CONTENT="no-cache"> 
+    <meta http-equiv="Pragma" CONTENT="no-cache"> 
+    <meta name="renderer" content="webkit">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <title>真宜签，让签署更有效</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?242203ec22694d0d63d9f750aa2bca10";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+        
+</head>
+<body style="visibility:hidden;">  
+<!-- <header id="header" style="display:none"> -->
+<header id="header">
+        <div class="container clf"> 
+            <a class="logo" href="/">
+                <img src="/images/logo_header_1.svg" alt="" height="20px">
+                <img src="/images/logo_header_2.svg" alt="" style="margin-left: 20px; height: 25px;margin-top: 2.5px;">
+            </a>       
+            <div class="header_right">
+                <a class="" href="http://justsign.com.cn/" class="sign-btn cube" target="_blank"><img src="/images/qb_icon.svg" alt=""></a>
+                <a href="javascript:;" class="zyq_btn"><img src="/images/zyq_icon.svg"  alt="">
+                    <div class="ewm">                        
+                        <img src="/images/erweima.png" alt="">
+                        <h3>真宜签APP下载二维码</h3>
+                    </div>
+                </a>
+                <a href="http://sign.gdca.com.cn/" target="_blank" class="signStart">
+                    <img src="/images/qianshu.svg" alt="">
+                    <img src="/images/qianshu_txt.svg" alt="">
+                    <!-- <span>开始签署</span> -->
+                </a>
+            </div>
+        </div>
+    </header>
+</header>
+<div id="wrap-silde" class="index_zyq">    
+  <div class="section home">
+    <div class="container">
+        <div class="pro-info fl" >
+            <h2 class="title fadeInUp wf"></h2>
+            <h2 class="title fadeInUp wf"></h2>
+        </div>
+        <img src="/images/logo.png" class="logo" alt="">
+    </div>
+  </div>
+  <div class="section  overview">
+    <div class="container">
+        <div class="pro-info fl" >
+            <h2 class="title fadeInUp wf"></h2>
+            <h2 class="title fadeInUp wf"></h2>
+        </div>
+        <ul class="clf">
+            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 animated zoomIn">
+                <img src="/images/icon1.png">
+                <h4>签署简单便捷</h4>
+                <p><br/>支持U-Key和移动端签署<br>支持单独签和多人会签多种应用场景</p>
+            </li>
+            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 animated zoomIn">
+                <img src="/images/icon2.png">
+                <h4>合法合规</h4>
+                <p>第三方在线合同平台，<br>满足平等、公平的法律要求。<br>支持获得《电子认证服务许可证》的CA证书，<br>完全符合《电子签名法》相关规定</p>
+            </li>
+            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 animated zoomIn">
+                <img src="/images/icon3.png">
+                <h4>安全稳定</h4>
+                <p>通过ISO27001国际安全认证，<br>提供金融级别的全面安全保障。<br>传输存储访问高强度加密。</p>
+            </li>
+            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 animated zoomIn">
+                <img src="/images/icon4.png">
+                <h4>司法鉴定</h4>
+                <p><br/>联合第三方司法鉴定机构，<br>证据实时保存，快速取证。</p>
+            </li>
+        </ul>
+    </div>
+  </div>
+  <div class="section configuration">
+    <div class="container">
+        <div class="pro-info fl" >
+            <h2 class="title fadeInUp wf"></h2>
+            <h2 class="title fadeInUp wf"></h2>
+        </div>
+        <div class="clf news_contain">
+            <div class="news_list">
+                
+                <% if (bannerDate && bannerDate.type == 0) { %>  
+                <a class="side_left" href="/detail/<%=bannerDate.newsId%>" target="_blank">
+                    <img src="<%=bannerDate.link%>" width="444" height="308" alt="">
+                    <p><%= bannerDate.title%></p>
+                </a>  
+                <% } %>  
+                <% if (bannerDate && bannerDate.type == 1) {  %>  
+                    <div class="media side_left">
+                        <video controls="controls">
+                            <source src="<%=bannerDate.link%>" type="video/mp4">
+                        </video>
+                    </div>  
+                <% } %>
+                <div class="side_right">
+                    <h3><img src="/images/news_icon.png" alt=""><span>资讯</span><!--<a href="javascript:;">|&nbsp;更多&nbsp;|</a>--></h3>
+                    <ul>
+
+                        <% recomendListData.forEach(function(item){%>
+                            <li>
+                                    <a href="/detail/<%=item._id%>" class="shengl" target="_blank"><%=item.title %></a>
+                                    <span><%= moment(item.createTime).format('YYYY-MM-DD'); %></span>
+                            </li>
+                        <% }) %>
+                        
+                        <!--<li>
+                            <a href="javascript:;" class="shengl">漫步者2014新款音乐耳机上市敬请关注漫步者2014新款音乐耳机上市敬请关注</a>
+                            <span>2017-09-09</span>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="news_thumb clf">
+                <ul>
+                    <% recomendThumbData.forEach(function(item){%>
+                        <li>
+                            <a href="/detail/<%=item._id%>" target="_blank">
+                                <span>
+                                    <img src="<%=hostLink+item.img%>" alt="">
+                                </span>
+                                <p class="shengl"><%=item.title%></p>
+                            </a>
+                        </li>
+                    <% }) %>
+                    
+                    <!-- <li>
+                        <a href="javascript:;">
+                            <span>
+                                <img src="/images/news_list.png" alt="">
+                            </span>
+                            <p>漫步者2014新款音乐耳机上市敬请关注漫步者2014新款音乐耳机上市敬请关注</p>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="section options">
+    <div class="container">
+        <div class="pro-info fl" >
+            <h2 class="title fadeInUp wf"></h2>
+            <h2 class="title fadeInUp wf"></h2>
+        </div>
+        <div class="info_contain">
+            <ul>
+                <li>
+                    <span><img src="/images/tu1.png" alt=""></span>
+                    <div>
+                        <h3><span></span></h3>
+                        <p>销售合同</p>
+                        <p>采购协议</p>
+                        <p>订单信息</p>
+                    </div>
+                    
+                </li>
+                <li>
+                    <span><img src="/images/tu2.png" alt=""></span>
+                    <div>
+                        <h3><span></span></h3>
+                        <p>旅游合同</p>
+                        <p>保险单</p>
+                        <p>劳动合同</p>
+                        <p>网贷协议</p>
+                    </div>
+                </li>
+                <li>
+                    <span><img src="/images/tu3.png" alt=""></span>
+                    <div>
+                        <h3><span></span></h3>
+                        <p>审批签名</p>
+                        <p>财务盖章</p>
+                        <p>请假申请</p>
+                        <p>申请签名</p>
+                    </div>
+                </li>
+                <li>
+                    <span><img src="/images/tu4.png" alt=""></span>
+                    <div>
+                        <h3><span></span></h3>
+                        <p>租赁协议</p>
+                        <p>借据收据</p>
+                        <p>个人协议</p>
+                        <p>委托授权</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </div>
+  <div class="section methods">
+    <div class="pro-info fl" >
+        <h2 class="title fadeInUp wf"></h2>
+        <h2 class="title fadeInUp wf"></h2>
+    </div>
+    <ul>
+        <li>
+            <span>
+                <img src="/images/pc.png" alt="">
+                <a href="http://sign.gdca.com.cn/" target="_blank" >
+                    <i><img class="icon" src="/images/computer.svg" width="36" alt=""></i>
+                    PC 网页打开
+                </a>
+            </span>
+        </li>
+        <li id="bottom">
+            <div class="btn-box clf">
+                <img src="/images/erweima.png" width="126" height="126" alt="">
+                <div> 
+                    <a target="_blank" href="https://itunes.apple.com/cn/app/%E7%9C%9F%E5%AE%9C%E7%AD%BE/id1237561078?mt=8"><img src="/images/icon1.svg" alt=""><img src="/images/phone_btn.svg" alt=""></a>
+                    <a target="_blank" href="http://imtt.dd.qq.com/16891/60411D82CCA8F3DA55BE93E503721531.apk"><img src="/images/icon2.svg" alt=""><img src="/images/android_btn.svg" alt=""></a>
+                </div>
+            </div> 
+        </li>
+    </ul>
+    <div class="footer">
+        <!-- <p><a href="http://www.miitbeian.gov.cn" target="_blank">联系我们</a>|<a href="http://www.miitbeian.gov.cn" target="_blank" >工业和信息化部</a>|<a href="#">公安部</a>|<a href="#">最高人民法院</a>|<a href="#">工商行政管理局</a>|<a href="#">商务部</a>|<a href="#">国家标准化管理委员会</a>|<a href="#">国家密码管理局</a></p> -->
+        
+        <p>
+            <span>友情链接：</span>
+            <a href="http://www.gdca.com.cn/" target="_blank">数安时代（GDCA）</a>
+            <a href="https://www.trustauth.com.cn/" target="_blank">信鉴科技</a>
+            <a href="http://www.miit.gov.cn/" target="_blank">中华人民共和国工业和信息化部</a>
+            <a href="http://www.oscca.gov.cn/" target="_blank">国家密码管理局</a>
+            <a href="http://www.ceaia.org.cn/" target="_blank">中国电子认证服务产业联盟</a>
+        </p>
+        <p>Copyright © 2015 数安时代科技股份有限公司 广东信鉴信息科技有限公司 All Rights Reserved.<a target="_blank" href="http://www.miitbeian.gov.cn/" class="gxb">粤ICP备05036352号</a>公安备案：4406053010643</p>
+    </div>
+  </div>
+</div>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/gdca.min.js"></script>
+<script>
+    $(function(){
+        var width = $(window).width();
+        var height = $(window).height();
+        var T = null;
+        var T2 = null;
+        var scale = width/height;
+        if(scale > (1920/965)){
+            $('.home,#bottom').css("background-size","100% auto");
+        }
+        $("#wrap-silde").fullpage({
+            "navigation": true,
+            verticalCentered: false,
+            resize: true
+        });
+        $('body').css('visibility','visible');
+        $(".zyq_btn").on('mouseenter',function(){
+            clearInterval(T2);
+            clearInterval(T);
+            T2 = setInterval(function(){
+                $('.ewm').fadeIn();
+                $('.zyq_btn').addClass('active');
+            },100)  
+
+        })
+        $(".zyq_btn").on('mouseleave',function(){
+            clearInterval(T);
+            clearInterval(T2);
+            T = setInterval(function(){
+                $('.ewm').fadeOut();
+                $('.zyq_btn').removeClass('active');
+            },100)
+        })
+        
+    })
+</script>
+</script>
+  </body>
+</html>

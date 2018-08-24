@@ -1,0 +1,35 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="zh" class="ie8"><![endif]-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Expires" CONTENT="0"> 
+    <meta http-equiv="Cache-Control" CONTENT="no-cache"> 
+    <meta http-equiv="Pragma" CONTENT="no-cache"> 
+    <meta name="renderer" content="webkit">
+    <title><%=detail.title%></title>
+    <meta name='apple-itunes-app' content='app-id=1237561078'>
+    <link rel="stylesheet" href="/css/index.css" />
+</head>
+<body>  
+<div class="h5_detail">
+    <div class="container">
+        <div class="hd">
+            <h1><%=detail.title%></h1>
+            <span><%= moment(detail.createTime).format('YYYY-MM-DD')%></span>
+            <span>来源:<%=detail.source%></span>
+        </div>
+        <div class="detail_contain">
+            <%-detail.content%>
+        </div>
+        <div class="downLoad">
+            <h4>真宜签app下载</h4>
+            <a href="javascript:;" class="downLoad-btn" data-href="https://itunes.apple.com/cn/app/%E7%9C%9F%E5%AE%9C%E7%AD%BE/id1237561078?mt=8">下载</a>
+        </div>
+    </div>
+</div>
+</script>
+</body>
+</html>

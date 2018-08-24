@@ -1,0 +1,107 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="zh" class="ie8"><![endif]-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Expires" CONTENT="0"> 
+    <meta http-equiv="Cache-Control" CONTENT="no-cache"> 
+    <meta http-equiv="Pragma" CONTENT="no-cache"> 
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <title><%=detail.title%></title>
+    <script type="text/javascript"> if(!window.console){ window.console = {}; } if(!window.console.log){ window.console.log = function(msg){}; }</script>
+    <link rel="stylesheet" href="/css/index.css" />
+</head>
+<body>  
+    <header id="header2">
+        <div class="container clf"> 
+            <a class="logo" href="/">
+                <img src="/images/logo_header.png" alt="">
+            </a>       
+            <div class="header_right">
+                <a class="" href="http://justsign.com.cn/" class="sign-btn cube" target="_blank"><img src="/images/qb_icon.png" alt=""></a>
+                <a href="javascript:;" class="zyq_btn"><img src="/images/zyq_icon.png"  alt="">
+                    <div class="ewm">                        
+                        <img src="/images/erweima.png" alt="">
+                        <h3>真宜签APP下载二维码</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+<div class="index_detail">
+    <div class="container">
+        <div class="side_left">
+            <div class="title">
+                <a href="/">首页</a>><span>新闻详情</span>
+            </div>
+            <div class="hd">
+                <h1><%=detail.title%></h1>
+                <span><%= moment(detail.createTime).format('YYYY-MM-DD')%></span>
+                <span>来源:<%=detail.source%></span>
+            </div>
+            <div class="detail_contain">
+                <%-detail.content%>
+            </div>
+        </div>
+        <div class="side_right">
+            <div class="newsList">
+                <h3>新闻咨讯</h3>
+                <ul>
+                    <% recomendThumbData.forEach(function(item){%>
+                        <li>
+                            <a href="/detail/<%=item._id%>">
+                                <span>
+                                    <img src="<%=hostLink+item.img%>" alt="">
+                                </span>
+                                <p class="shengl"><%=item.title%></p>
+                            </a>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="footer2">
+    <!-- <p><a href="http://www.miitbeian.gov.cn" target="_blank">联系我们</a>|<a href="http://www.miitbeian.gov.cn" target="_blank" >工业和信息化部</a>|<a href="#">公安部</a>|<a href="#">最高人民法院</a>|<a href="#">工商行政管理局</a>|<a href="#">商务部</a>|<a href="#">国家标准化管理委员会</a>|<a href="#">国家密码管理局</a></p> -->
+    
+    <p>
+        <span>友情链接：</span>
+        <a href="http://www.gdca.com.cn/" target="_blank">数安时代（GDCA）</a>
+        <a href="https://www.trustauth.com.cn/" target="_blank">信鉴科技</a>
+        <a href="http://www.miit.gov.cn/" target="_blank">中华人民共和国工业和信息化部</a>
+        <a href="http://www.oscca.gov.cn/" target="_blank">国家密码管理局</a>
+        <a href="http://www.ceaia.org.cn/" target="_blank">中国电子认证服务产业联盟</a>
+    </p>
+    <p>Copyright © 2015 数安时代科技股份有限公司 广东信鉴信息科技有限公司 All Rights Reserved. 粤ICP备05036352号   公安备案：4406053010643</p>
+</div>
+<script src="/js/jquery.min.js"></script>
+<script>
+    $(function(){
+        var T = null;
+        var T2 = null;
+        $(".zyq_btn").on('mouseenter',function(){
+            clearInterval(T2);
+            clearInterval(T);
+            T2 = setInterval(function(){
+                $('.ewm').fadeIn();
+                $('.zyq_btn').addClass('active');
+            },100)  
+
+        })
+        $(".zyq_btn").on('mouseleave',function(){
+            clearInterval(T);
+            clearInterval(T2);
+            T = setInterval(function(){
+                $('.ewm').fadeOut();
+                $('.zyq_btn').removeClass('active');
+            },100)
+        })
+    })
+</script>
+</script>
+  </body>
+</html>
